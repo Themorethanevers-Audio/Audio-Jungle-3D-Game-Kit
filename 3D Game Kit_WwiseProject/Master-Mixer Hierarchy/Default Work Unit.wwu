@@ -3,12 +3,48 @@
 	<Busses>
 		<WorkUnit Name="Default Work Unit" ID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}" PersistMode="Standalone">
 			<ChildrenList>
-				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+				<Bus Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
 					<ReferenceList>
 						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
 							<ObjectRef Name="System" ID="{E41E33C5-1D6A-4BF4-8D96-E1172553B2CC}" WorkUnitID="{C2EDAEC0-4440-4E7F-B96D-D5CB4CB03A1C}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="AmbientMain" ID="{31416715-0FDC-46E3-9D1A-CF4761C8A7D6}">
+							<ChildrenList>
+								<Bus Name="AmbientBeds" ID="{D176E7F0-614B-4EC2-870E-097CAE3DF5E3}">
+									<ChildrenList>
+										<Bus Name="2DAmbientBeds" ID="{503B829D-E9BC-44EB-AF66-2F043FB71545}"/>
+									</ChildrenList>
+								</Bus>
+								<Bus Name="3DAmbience" ID="{48702476-0F88-4045-95F8-36EF1A535239}"/>
+								<Bus Name="2DAmbience" ID="{F35DD9F8-DE01-4873-A287-FA29F15BD3DF}"/>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="NPCMain" ID="{134EF80D-245A-4B97-B639-27127C0845DD}">
+							<ChildrenList>
+								<Bus Name="New Audio Bus" ID="{F27C8D08-2150-4040-BF34-7A6B90887766}"/>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="PlayerMain" ID="{46C9CBE1-BEC0-4C70-8AF1-7B0196C48C63}">
+							<ChildrenList>
+								<Bus Name="PlayerLocomotion" ID="{DC05A0AB-744A-4239-841C-C6ECF5DE4A0E}">
+									<ChildrenList>
+										<Bus Name="PlayerFootsteps" ID="{1AFA94BB-518F-4F56-B657-885A8A170C9E}"/>
+										<Bus Name="PlayerCloth" ID="{23F49557-0B7E-42C0-A8CA-80EB883E3E47}"/>
+									</ChildrenList>
+								</Bus>
+							</ChildrenList>
+						</Bus>
+						<AuxBus Name="Reverbs" ID="{D6219EEC-EFFC-4779-9856-169E70065962}">
+							<ChildrenList>
+								<AuxBus Name="LargeRoom" ID="{DC23788A-703A-44EF-8385-E5518250F494}"/>
+								<AuxBus Name="SmallRoom" ID="{9FBC84BE-761C-4C36-A684-F05817C520B9}"/>
+								<AuxBus Name="Cave" ID="{551EAAA5-3877-4C81-8B38-3B2A5618024F}"/>
+								<AuxBus Name="Outdoors" ID="{F379166C-8D91-438A-9151-99E25F250D20}"/>
+							</ChildrenList>
+						</AuxBus>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>
