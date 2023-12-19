@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{079142A8-1ECB-48BB-8E1A-74FC41874311}" SchemaVersion="119">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{079142A8-1ECB-48BB-8E1A-74FC41874311}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{079142A8-1ECB-48BB-8E1A-74FC41874311}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_AmbienceTest" ID="{CB9485DE-6541-4860-9C22-05B8813CDD2B}">
+					<ChildrenList>
+						<Action Name="" ID="{3DB92C05-5114-4D75-9AEE-B6AD4E5E3BE8}" ShortID="275177017">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_Jungle_Ambisonic" ID="{7523C3ED-9D4C-4274-A8F2-926A2F9DE2C5}" WorkUnitID="{F8990ACC-39C6-4B49-82C6-82E49B92868C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BCCE111E-BE5F-4B0A-A385-B29C7BC7CDD7}" ShortID="389366732">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_Swamp_Ambisonics" ID="{07706176-6E74-45CE-9F2C-8B03248F67A5}" WorkUnitID="{F8990ACC-39C6-4B49-82C6-82E49B92868C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D5E5AC17-9B5D-422C-AFF1-F3697CA6A79A}" ShortID="204833231">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_Water_Ambisonic" ID="{461D4901-5CE8-409E-B3FF-87B9234F4267}" WorkUnitID="{F8990ACC-39C6-4B49-82C6-82E49B92868C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6C40B8FB-4022-4388-9EC0-1A8800FC77D9}" ShortID="556097600">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_Wind_Ambisonic" ID="{5F8FBF54-6811-480F-9AA9-93897905325E}" WorkUnitID="{F8990ACC-39C6-4B49-82C6-82E49B92868C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3459FC7D-9A2A-4548-B21E-1126A5F77343}" SchemaVersion="119">
+	<States>
+		<WorkUnit Name="AmbienceStates" ID="{3459FC7D-9A2A-4548-B21E-1126A5F77343}" PersistMode="Standalone"/>
+	</States>
+</WwiseDocument>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F8990ACC-39C6-4B49-82C6-82E49B92868C}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="Ambience" ID="{F8990ACC-39C6-4B49-82C6-82E49B92868C}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="Ambience_Main_Mixer" ID="{6F3C50F5-DD7C-4E58-80DD-CE395D6F91D6}" ShortID="639030166">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3805EC0-8736-4FDE-BB73-8F72BC875D86}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SwitchContainer Name="Ambience_TimeOfDay_Switch" ID="{4E7AA919-05F6-4244-AD43-3ABB19A91F95}" ShortID="994319916">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3805EC0-8736-4FDE-BB73-8F72BC875D86}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
+								</Reference>
+							</ReferenceList>
+							<GroupingInfo/>
+						</SwitchContainer>
+						<ActorMixer Name="Ambience_Outdoors" ID="{CED10D4D-C163-491F-AFE1-ABC25C900E04}" ShortID="932733483">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3805EC0-8736-4FDE-BB73-8F72BC875D86}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<ActorMixer Name="Ambisonics_Outdoors" ID="{D530A094-2D5F-48CA-9F24-58220506B3E3}" ShortID="786501608">
+									<PropertyList>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3805EC0-8736-4FDE-BB73-8F72BC875D86}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="AmbientBeds" ID="{D176E7F0-614B-4EC2-870E-097CAE3DF5E3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<BlendContainer Name="Ambience_Jungle_Ambisonic" ID="{7523C3ED-9D4C-4274-A8F2-926A2F9DE2C5}" ShortID="896442866">
+											<PropertyList>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Attenuation_OutdoorsAmbience" ID="{07CC3127-C11D-45AD-B688-638805E386DC}" WorkUnitID="{2473B159-86CA-444D-AF03-65E3EA2A004B}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3805EC0-8736-4FDE-BB73-8F72BC875D86}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="bugs_Ambisonics" ID="{33E63ACC-3903-40E7-910A-FC1B3DDE1A5F}" ShortID="85951017">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-11</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3805EC0-8736-4FDE-BB73-8F72BC875D86}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="bugs_Ambisonics" ID="{D88A4748-744A-4725-A925-C1983DE207B4}">
+															<Language>SFX</Language>
+															<AudioFile>bugs_Ambisonics.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="326867851"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="bugs_Ambisonics" ID="{D88A4748-744A-4725-A925-C1983DE207B4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="frogs_Ambisonics" ID="{5DF8B807-EA5D-49EA-8646-771CC19DC190}" ShortID="397098095">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3805EC0-8736-4FDE-BB73-8F72BC875D86}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="frogs_Ambisonics" ID="{D3AD76C5-BBEF-443B-87CC-EB0439A9B3DC}">
+															<Language>SFX</Language>
+															<AudioFile>frogs_Ambisonics.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="344641219"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="frogs_Ambisonics" ID="{D3AD76C5-BBEF-443B-87CC-EB0439A9B3DC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Ambience_Swamp_Ambisonics" ID="{07706176-6E74-45CE-9F2C-8B03248F67A5}" ShortID="576387063">
+											<PropertyList>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Attenuation_OutdoorsAmbience" ID="{07CC3127-C11D-45AD-B688-638805E386DC}" WorkUnitID="{2473B159-86CA-444D-AF03-65E3EA2A004B}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3805EC0-8736-4FDE-BB73-8F72BC875D86}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
+												</Reference>
+											</ReferenceList>
+										</BlendContainer>
+										<BlendContainer Name="Ambience_Water_Ambisonic" ID="{461D4901-5CE8-409E-B3FF-87B9234F4267}" ShortID="852057952">
+											<PropertyList>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Attenuation_OutdoorsAmbience" ID="{07CC3127-C11D-45AD-B688-638805E386DC}" WorkUnitID="{2473B159-86CA-444D-AF03-65E3EA2A004B}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3805EC0-8736-4FDE-BB73-8F72BC875D86}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
+												</Reference>
+											</ReferenceList>
+										</BlendContainer>
+										<BlendContainer Name="Ambience_Wind_Ambisonic" ID="{5F8FBF54-6811-480F-9AA9-93897905325E}" ShortID="801301208">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="15"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Attenuation_OutdoorsAmbience" ID="{07CC3127-C11D-45AD-B688-638805E386DC}" WorkUnitID="{2473B159-86CA-444D-AF03-65E3EA2A004B}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3805EC0-8736-4FDE-BB73-8F72BC875D86}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Z7b6e0e08b06f133a91d2" ID="{292AFDCC-8B74-4D95-8DAE-A55F6F38DD91}" ShortID="999921138">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3805EC0-8736-4FDE-BB73-8F72BC875D86}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Z7b6e0e08b06f133a91d2" ID="{DAFC7F07-AD7A-40F2-BFD1-282B42FE3436}">
+															<Language>SFX</Language>
+															<AudioFile>Z7b6e0e08b06f133a91d2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="389729554"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Z7b6e0e08b06f133a91d2" ID="{DAFC7F07-AD7A-40F2-BFD1-282B42FE3436}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+									</ChildrenList>
+								</ActorMixer>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

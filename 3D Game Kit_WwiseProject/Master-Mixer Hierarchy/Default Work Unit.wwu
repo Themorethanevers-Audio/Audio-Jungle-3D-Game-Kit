@@ -13,6 +13,13 @@
 						<Bus Name="AmbientMain" ID="{31416715-0FDC-46E3-9D1A-CF4761C8A7D6}">
 							<ChildrenList>
 								<Bus Name="AmbientBeds" ID="{D176E7F0-614B-4EC2-870E-097CAE3DF5E3}">
+									<PropertyList>
+										<Property Name="BusChannelConfig" Type="int32">
+											<ValueList>
+												<Value>516</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ChildrenList>
 										<Bus Name="2DAmbientBeds" ID="{503B829D-E9BC-44EB-AF66-2F043FB71545}"/>
 									</ChildrenList>
