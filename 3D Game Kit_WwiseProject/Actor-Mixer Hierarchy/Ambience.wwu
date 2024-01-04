@@ -48,7 +48,10 @@
 							<ChildrenList>
 								<ActorMixer Name="Ambisonics_Outdoors" ID="{D530A094-2D5F-48CA-9F24-58220506B3E3}" ShortID="786501608">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -61,6 +64,9 @@
 									<ChildrenList>
 										<BlendContainer Name="Ambience_Jungle_Ambisonic" ID="{7523C3ED-9D4C-4274-A8F2-926A2F9DE2C5}" ShortID="896442866">
 											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 											</PropertyList>
 											<ReferenceList>
@@ -71,12 +77,14 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3805EC0-8736-4FDE-BB73-8F72BC875D86}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
+													<ObjectRef Name="AmbientBeds" ID="{D176E7F0-614B-4EC2-870E-097CAE3DF5E3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="bugs_Ambisonics" ID="{33E63ACC-3903-40E7-910A-FC1B3DDE1A5F}" ShortID="85951017">
 													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+														<Property Name="OverrideOutput" Type="bool" Value="True"/>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
 																<Value>-11</Value>
@@ -88,7 +96,7 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3805EC0-8736-4FDE-BB73-8F72BC875D86}"/>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
+															<ObjectRef Name="AmbientBeds" ID="{D176E7F0-614B-4EC2-870E-097CAE3DF5E3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -105,6 +113,9 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="frogs_Ambisonics" ID="{5DF8B807-EA5D-49EA-8646-771CC19DC190}" ShortID="397098095">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3805EC0-8736-4FDE-BB73-8F72BC875D86}"/>
@@ -129,9 +140,6 @@
 											</ChildrenList>
 										</BlendContainer>
 										<BlendContainer Name="Ambience_Swamp_Ambisonics" ID="{07706176-6E74-45CE-9F2C-8B03248F67A5}" ShortID="576387063">
-											<PropertyList>
-												<Property Name="OverridePositioning" Type="bool" Value="True"/>
-											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
 													<ObjectRef Name="Attenuation_OutdoorsAmbience" ID="{07CC3127-C11D-45AD-B688-638805E386DC}" WorkUnitID="{2473B159-86CA-444D-AF03-65E3EA2A004B}"/>
@@ -145,9 +153,6 @@
 											</ReferenceList>
 										</BlendContainer>
 										<BlendContainer Name="Ambience_Water_Ambisonic" ID="{461D4901-5CE8-409E-B3FF-87B9234F4267}" ShortID="852057952">
-											<PropertyList>
-												<Property Name="OverridePositioning" Type="bool" Value="True"/>
-											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
 													<ObjectRef Name="Attenuation_OutdoorsAmbience" ID="{07CC3127-C11D-45AD-B688-638805E386DC}" WorkUnitID="{2473B159-86CA-444D-AF03-65E3EA2A004B}"/>
@@ -162,9 +167,17 @@
 										</BlendContainer>
 										<BlendContainer Name="Ambience_Wind_Ambisonic" ID="{5F8FBF54-6811-480F-9AA9-93897905325E}" ShortID="801301208">
 											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="Color" Type="int16" Value="15"/>
+												<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
@@ -174,11 +187,14 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3805EC0-8736-4FDE-BB73-8F72BC875D86}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
+													<ObjectRef Name="AmbientBeds" ID="{D176E7F0-614B-4EC2-870E-097CAE3DF5E3}" WorkUnitID="{6E5D47F7-D34A-4724-B916-DAFE4F32D28F}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Z7b6e0e08b06f133a91d2" ID="{292AFDCC-8B74-4D95-8DAE-A55F6F38DD91}" ShortID="999921138">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B3805EC0-8736-4FDE-BB73-8F72BC875D86}"/>
@@ -201,6 +217,9 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<PositioningInfo>
+												<Panner Name="" ID="{3C649C73-6FD6-404A-962E-787E0248597F}"/>
+											</PositioningInfo>
 										</BlendContainer>
 									</ChildrenList>
 								</ActorMixer>

@@ -14,12 +14,16 @@
 							<ChildrenList>
 								<Bus Name="AmbientBeds" ID="{D176E7F0-614B-4EC2-870E-097CAE3DF5E3}">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="BusChannelConfig" Type="int32">
 											<ValueList>
 												<Value>516</Value>
 											</ValueList>
 										</Property>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
 									</PropertyList>
+									<ReferenceList/>
 									<ChildrenList>
 										<Bus Name="2DAmbientBeds" ID="{503B829D-E9BC-44EB-AF66-2F043FB71545}"/>
 									</ChildrenList>
@@ -45,10 +49,53 @@
 						</Bus>
 						<AuxBus Name="Reverbs" ID="{D6219EEC-EFFC-4779-9856-169E70065962}">
 							<ChildrenList>
-								<AuxBus Name="LargeRoom" ID="{DC23788A-703A-44EF-8385-E5518250F494}"/>
+								<AuxBus Name="LargeRoom" ID="{DC23788A-703A-44EF-8385-E5518250F494}">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Attenuation_OutdoorsAmbience" ID="{07CC3127-C11D-45AD-B688-638805E386DC}" WorkUnitID="{2473B159-86CA-444D-AF03-65E3EA2A004B}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
 								<AuxBus Name="SmallRoom" ID="{9FBC84BE-761C-4C36-A684-F05817C520B9}"/>
 								<AuxBus Name="Cave" ID="{551EAAA5-3877-4C81-8B38-3B2A5618024F}"/>
-								<AuxBus Name="Outdoors" ID="{F379166C-8D91-438A-9151-99E25F250D20}"/>
+								<AuxBus Name="Outdoors" ID="{F379166C-8D91-438A-9151-99E25F250D20}">
+									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="1"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="BusChannelConfig" Type="int32">
+											<ValueList>
+												<Value>516</Value>
+											</ValueList>
+										</Property>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList/>
+									<PositioningInfo>
+										<Position Name="" ID="{E64BC1FB-ABF7-4866-93E2-26D294429172}"/>
+									</PositioningInfo>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{87812FB4-FFBB-429E-9403-E14A0457A321}" ShortID="1015335321">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
 							</ChildrenList>
 						</AuxBus>
 					</ChildrenList>

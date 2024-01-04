@@ -4,6 +4,9 @@
 		<WorkUnit Name="Default Work Unit" ID="{2473B159-86CA-444D-AF03-65E3EA2A004B}" PersistMode="Standalone">
 			<ChildrenList>
 				<Attenuation Name="Attenuation_OutdoorsAmbience" ID="{07CC3127-C11D-45AD-B688-638805E386DC}" ShortID="158667449">
+					<PropertyList>
+						<Property Name="RadiusMax" Type="Real64" Value="200"/>
+					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
@@ -18,7 +21,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>100</XPos>
+											<XPos>200</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -51,8 +54,8 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>100</XPos>
-											<YPos>0</YPos>
+											<XPos>200</XPos>
+											<YPos>100</YPos>
 											<Flags>37</Flags>
 										</Point>
 									</PointList>

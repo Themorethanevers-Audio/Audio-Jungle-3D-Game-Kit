@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1550126206	Play_AmbienceTest			\Default Work Unit\Play_AmbienceTest	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	326867851	bugs_Ambisonics	C:\Dev Projects\3D Game Kit\Audio-Jungle-3D-Game-Kit\3D Game Kit_WwiseProject\.cache\Windows\SFX\bugs_Ambisonics_FBC78EF0.wem		\Actor-Mixer Hierarchy\Ambience\Ambience_Main_Mixer\Ambience_Outdoors\Ambisonics_Outdoors\Ambience_Jungle_Ambisonic\bugs_Ambisonics		69262240
+	344641219	frogs_Ambisonics	C:\Dev Projects\3D Game Kit\Audio-Jungle-3D-Game-Kit\3D Game Kit_WwiseProject\.cache\Windows\SFX\frogs_Ambisonics_FBC78EF0.wem		\Actor-Mixer Hierarchy\Ambience\Ambience_Main_Mixer\Ambience_Outdoors\Ambisonics_Outdoors\Ambience_Jungle_Ambisonic\frogs_Ambisonics		139415592
+	389729554	Z7b6e0e08b06f133a91d2	C:\Dev Projects\3D Game Kit\Audio-Jungle-3D-Game-Kit\3D Game Kit_WwiseProject\.cache\Windows\SFX\Z7b6e0e08b06f133a91d2_FBC78EF0.wem		\Actor-Mixer Hierarchy\Ambience\Ambience_Main_Mixer\Ambience_Outdoors\Ambisonics_Outdoors\Ambience_Wind_Ambisonic\Z7b6e0e08b06f133a91d2		89561864
+

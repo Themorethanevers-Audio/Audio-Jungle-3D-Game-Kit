@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Mac</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="768400774" Type="User" Language="SFX" Hash="{6F4563E0-5CFC-BB69-6449-BCA89301DEF7}">
+			<ShortName>SoundBanks_Test</ShortName>
+			<Path>SoundBanks_Test.bnk</Path>
+			<Media>
+				<File Id="326867851" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>bugs_Ambisonics.wav</ShortName>
+					<CachePath>SFX/bugs_Ambisonics_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="344641219" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>frogs_Ambisonics.wav</ShortName>
+					<CachePath>SFX/frogs_Ambisonics_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="389729554" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Z7b6e0e08b06f133a91d2.wav</ShortName>
+					<CachePath>SFX/Z7b6e0e08b06f133a91d2_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1550126206" Name="Play_AmbienceTest" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="326867851"/>
+						<MediaRef Id="344641219"/>
+						<MediaRef Id="389729554"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{83BDC92A-1D4C-9039-7F59-6BB3ABBEBA6F}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="309309195" Name="2DAmbience"/>
+				<Bus Id="765206498" Name="PlayerCloth"/>
+				<Bus Id="1182634443" Name="AmbientBeds"/>
+				<Bus Id="1301074112" Name="3DAmbience"/>
+				<Bus Id="1304926084" Name="AmbientMain"/>
+				<Bus Id="1681012287" Name="PlayerFootsteps"/>
+				<Bus Id="2246998526" Name="Main Audio Bus"/>
+				<Bus Id="2255513057" Name="New Audio Bus"/>
+				<Bus Id="2343802269" Name="PlayerLocomotion"/>
+				<Bus Id="2586669421" Name="PlayerMain"/>
+				<Bus Id="3778764877" Name="NPCMain"/>
+				<Bus Id="4152869693" Name="2DAmbientBeds"/>
+			</Busses>
+			<AuxBusses>
+				<AuxBus Id="187046019" Name="LargeRoom" MaxAttenuation="200">
+					<AuxBusRefs>
+						<AuxBusRef Id="3545700988" Name="Reverbs"/>
+					</AuxBusRefs>
+				</AuxBus>
+				<AuxBus Id="2730119150" Name="Outdoors">
+					<AuxBusRefs>
+						<AuxBusRef Id="3545700988" Name="Reverbs"/>
+					</AuxBusRefs>
+				</AuxBus>
+				<AuxBus Id="2933838247" Name="SmallRoom">
+					<AuxBusRefs>
+						<AuxBusRef Id="3545700988" Name="Reverbs"/>
+					</AuxBusRefs>
+				</AuxBus>
+				<AuxBus Id="3545700988" Name="Reverbs"/>
+				<AuxBus Id="4122393694" Name="Cave">
+					<AuxBusRefs>
+						<AuxBusRef Id="3545700988" Name="Reverbs"/>
+					</AuxBusRefs>
+				</AuxBus>
+			</AuxBusses>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{E2F72C15-B1C0-78A8-DBA6-504927F42BD7}</FileHash>
+</SoundBanksInfo>
